@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kripto Para Takip</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Kripto Para Takip</h1>
+        
+        <!-- Arama Kutusu -->
+        <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Kripto Para Ara (ör. Bitcoin)" 
+            oninput="searchCrypto()" 
+            class="search-input"
+        />
+
+        <!-- Kripto Para Listesi -->
+        <div class="crypto-list" id="cryptoList">
+            <p>Yükleniyor...</p>
+        </div>
+    </div>
+
+    <!-- Modal (Detaylı Bilgiler) -->
+    <div id="cryptoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="cryptoName">Kripto Adı</h2>
+            <canvas id="cryptoChart"></canvas>
+            <p id="cryptoDetails"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

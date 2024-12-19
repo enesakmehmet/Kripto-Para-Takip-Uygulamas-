@@ -1,0 +1,169 @@
+/* Genel Stiller */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Arama Kutusu */
+.search-input {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.search-input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Kripto Kartları */
+.crypto-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.crypto-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.crypto-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.crypto-card h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #e9f1ff;
+}
+
+.crypto-card p {
+    font-size: 1rem;
+    color: #b8d1f5;
+}
+
+/* Hover Efektleri */
+.crypto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    color: white;
+    text-align: center;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.modal-content canvas {
+    margin: 20px 0;
+}
+
+.close {
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+}
+
+.close:hover {
+    color: #ff3e3e;
+}
+
+/* Animasyon */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .search-input {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    .crypto-card h2 {
+        font-size: 1rem;
+    }
+
+    .crypto-card p {
+        font-size: 0.9rem;
+    }
+}
